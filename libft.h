@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mraineri <mraineri@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: mraineri <mraineri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:08:48 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/20 16:15:10 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/20 16:57:53 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int		ft_strlen(char *str);
 // Size_t Returns:
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 // Chars Returns:
-char *ft_strchr(const char *s, int c);
+char    *ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 #endif
