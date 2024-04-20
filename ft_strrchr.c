@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mraineri <mraineri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:19:40 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/20 16:52:40 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/20 17:03:45 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,4 @@ char	*ft_strrchr(const char *s, int c)
 		}
 	}
 	return NULL;
-}
-
-int	main(void)
-{
-	char test[] = "Hello World Wird";
-	char *mytest = ft_strrchr(test, 87);
-	printf("%s", mytest);	
 }
