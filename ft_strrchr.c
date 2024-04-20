@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:19:40 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/20 17:03:45 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/20 17:34:40 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 	
 	i = ft_strlen((char *)s);
-	if(s == NULL || c == NULL)
+	if(!s| !c || i == 0)
 		return NULL;
-	while (--i >= 0 && i != -1)
+	while (--i >= 0)
 	{
 		if(s[i] == c)
 		{

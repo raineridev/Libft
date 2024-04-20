@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 17:03:09 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/20 17:32:22 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/20 17:35:52 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int     ft_strncmp(const char *s1, const char *s2, size_t n)
     return  (0);
 }
 
-int main(void)
-{
-    char str1[] = "MArcelo"; 
-    char str2[] = "Marcelo";
-    printf("Strncmp original: %d\n", strncmp(str1, str2, 5));
-    printf("My Ft_Strncmp: %d", ft_strncmp(str1, str2, 5));
-}
+// int main(void)
+// {
+//     char str1[] = "MArcelo"; 
+//     char str2[] = "Marcelo";
+//     printf("Strncmp original: %d\n", strncmp(str1, str2, 5));
+//     printf("My Ft_Strncmp: %d", ft_strncmp(str1, str2, 5));
+// }
