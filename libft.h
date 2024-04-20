@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mraineri <mraineri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:08:48 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/20 16:57:53 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/20 17:33:32 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		ft_isascii(int c);
 int		ft_isdigit(char c);
 int		ft_isprint(int c);
 int		ft_strlen(char *str);
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
 // Size_t Returns:
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 // Chars Returns:
