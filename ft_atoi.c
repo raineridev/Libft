@@ -10,33 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-int	ft_atoi(const char *nptr)
+#include "libft.h"
+
+int ft_atoi(const char *nptr)
 {
 	int	i;
+	int	num;
 	int	signal;
 
-	signal = 1;
 	i = 0;
+	num = 0;
 	while(nptr[i] == 32)
-	{	
-	i++;
-	}
-	if(nptr[i] == '+' || nptr[i] == '-')
+		i++;
+	signal = (nptr[i] != '-') - (nptr[i] == '-');
+	i += (nptr[i] == '-' || nptr[i] == '+');
+	while(nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		signal = signal * nptr[i];
+		num = num * 10 + (nptr[i] - '0');
+		i++;
 	}
-	while(nptr[i] >= 49 && nptr[i] <= 57)
-	{
-			
-	}
-	return(0);
+	return (num * signal);
 }
 
 int	main(void)
 {
-	char str[] = "    -69adfasdfasd98";	
+	char str[] = "    69adfasdfasd98";	
+	printf("%d\n", ft_atoi(str));
 	printf("%d\n", atoi(str));
 	return (0);
 }
