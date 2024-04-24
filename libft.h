@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:08:48 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/20 17:33:32 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/24 12:08:07 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <string.h>
+# include <stdlib.h>
 // Void Returns:
 void	*ft_memset(void *s, int c, size_t n);
-void    ft_bzero(void *s, size_t n);
+void	*ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 // Int's Returns:
@@ -28,10 +29,11 @@ int		ft_isascii(int c);
 int		ft_isdigit(char c);
 int		ft_isprint(int c);
 int		ft_strlen(char *str);
-int     ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 // Size_t Returns:
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 // Chars Returns:
-char    *ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strstr(const char *haystack, const char *needle);
 #endif

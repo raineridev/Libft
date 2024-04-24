@@ -6,13 +6,13 @@
 /*   By: mraineri <mraineri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:47:04 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/09 13:07:51 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:35:31 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	ft_toupper(char *string)
+char	ft_tolower(char *string)
 {
 	int	i;
 
@@ -27,5 +27,3 @@ char	ft_toupper(char *string)
 	}
 	return (*string);
 }
-
-            

@@ -6,26 +6,26 @@
 /*   By: mraineri <mraineri@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 18:34:33 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/17 12:59:06 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:31:32 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if(!n)
-		return	(dest);
-	if(dest < src)
+	if (!n)
+		return (dest);
+	if (dest < src)
 	{
 		return (ft_memcpy(dest, src, n));
 	}
-	if(dest > src)
+	if (dest > src)
 	{
-		while(n--)
+		while (n--)
 		{
-		((char *)dest)[n] = ((char *)src)[n];
+			((char *)dest)[n] = ((char *)src)[n];
 		}
 	}
-	return	(dest);
+	return (dest);
 }
