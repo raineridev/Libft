@@ -3,27 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mraineri <mraineri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:47:04 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/24 11:35:31 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:10:12 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+#include <stdlib.h>
+#include <unistd.h>
+#include <ctype.h>
 
-char	ft_tolower(char *string)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (string[i] != '\0')
-	{
-		if (string[i] >= 65 && string[i] <= 90)
-		{
-			string[i] = string[i] + 32;
-		}
-		i++;
-	}
-	return (*string);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

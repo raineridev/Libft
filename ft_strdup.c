@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 17:03:09 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/24 19:14:36 by mraineri         ###   ########.fr       */
+/*   Created: 2024/04/24 16:18:17 by mraineri          #+#    #+#             */
+/*   Updated: 2024/04/24 19:21:54 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
+	size_t		i;
+	char		*np;
 
+	np = ft_calloc(ft_strlen((char *)s) + 1, 1);
+	if (!np)
+		return (NULL);
 	i = 0;
-	while (s1[i] && s2[i] && i < n)
+	while (s[i])
 	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			break;
+		np[i] = s[i];
+		i++;
 	}
-	if (i != n)
-		return (((unsigned char)s1[i] - (unsigned char)s2[i]));
-	return (0);
+	return (np);
 }
 
-// int main(void)
-// {
-//     char str1[] = "s"; 
-//     char str2[] = "ã";
-//     printf("Strncmp original: %d\n", strncmp(str1, str2, 5));
-//     printf("My Ft_Strncmp: %d\n", ft_strncmp(str1, str2, 5));
-// }
+//int	main(){
+//	printf("%s\n",ft_strdup("lorem ipsum dolor sit amet"));
+//}

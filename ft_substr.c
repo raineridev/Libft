@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 17:03:09 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/24 19:14:36 by mraineri         ###   ########.fr       */
+/*   Created: 2024/04/25 18:59:37 by mraineri          #+#    #+#             */
+/*   Updated: 2024/04/25 19:27:22 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
+	int	i;
+	int	j;
 
+	j = 0;
 	i = 0;
-	while (s1[i] && s2[i] && i < n)
+	while(*s[i] != '\0')
 	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			break;
+		
 	}
-	if (i != n)
-		return (((unsigned char)s1[i] - (unsigned char)s2[i]));
-	return (0);
 }
 
-// int main(void)
-// {
-//     char str1[] = "s"; 
-//     char str2[] = "ã";
-//     printf("Strncmp original: %d\n", strncmp(str1, str2, 5));
-//     printf("My Ft_Strncmp: %d\n", ft_strncmp(str1, str2, 5));
-// }
+int	main(void)
+{
+	
+}
