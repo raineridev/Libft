@@ -1,39 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 12:35:39 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/07 10:28:24 by mraineri         ###   ########.fr       */
+/*   Created: 2024/05/05 17:25:33 by mraineri          #+#    #+#             */
+/*   Updated: 2024/05/05 17:38:23 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	if(ft_itoa(n))
+	write(fd, ft_itoa(n), ft_strlen(ft_itoa(n)));
+}
 
-	i = 0;
-	while (s[i])
-	{
-		if ((unsigned char)s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	if ((unsigned char)c == '\0')
-			return ((char *)&s[i]);
-	return (NULL);
-}
-/*
-int	main(void)
-{
-	char s[] = "tripouille";
-	char *bds = strchr(s, 0);
-	char *mytest = ft_strchr(s, 0);
-	printf("%s\n", bds);
-	printf(":%s\n", mytest);	
-}
-*/
+//int	main(void)
+//{
+//	ft_putnbr_fd(434, 1);
+//}

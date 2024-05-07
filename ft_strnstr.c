@@ -6,26 +6,28 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:24:15 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/24 19:36:42 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:01:56 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (haystack[i] != '\0')
+	if(!needle[i])
+		return (char *)haystack;
+	while (i < len && haystack[i])
 	{
 		j = 0;
-		while (haystack[i + j] == needle[j])
+		while (haystack[i + j] == needle[j] && needle[j] && i + j < len)
 		{
-			if (needle[j + 1] == '\0')
-				return (&((char *)haystack)[i]);
 			j++;
+			if (!needle[j])
+				return (&((char *)haystack)[i]);
 		}
 		i++;
 	}
@@ -34,8 +36,8 @@ char	*ft_strnstr(const char *haystack, const char *needle)
 
 //int	main(void)
 //{
-//	char *str = "D tomate tomas arroz e carne";
-//	char *needle = "tomas";
-//	printf("1#'%s'\n", ft_strstr(str, needle));
-//	printf("2#'%s'\n", strstr(str, needle));
+//	char *str = "lorem ipsum dolor sit amet";
+//	char *needle = "";
+//	printf("1#'%s'\n", ft_strnstr(str, needle, 10));
+//	//printf("2#'%s'\n", strstr(str, needle));
 //}

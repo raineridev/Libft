@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:00:34 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/24 11:43:11 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/07 12:05:44 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,25 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
+	size_t len;
 
 	i = 0;
-	while (i <= size)
+	len = ft_strlen(src);
+	if (size == 0)
+		return (len);
+	while(src[i] && i < (size - 1) && i <= len)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (i);
+	return (len);
 }
 
 //int	main(void)
 //{
-//	char dst[] = "Heapjkdfgsdjgs";
-//	char src[] = "Downed"; // 0-D | 1-O | 2-W | 3-N | 4-E | 5-D | 6-\0 |	
-//	printf("Return: %zu\n",ft_strlcpy(dst, src, 5));
-//	//dst[6] = '\0';
-//	printf("%s", dst);
+//	char dst[10]; memset(dst, 'A', 10);
+//	char src[] = "coucou"; 
+//	printf("Return: %zu\n",ft_strlcpy(dst, src, 2));
+//	printf("%s\n", dst);
 //}

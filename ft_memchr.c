@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 17:37:05 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/24 12:11:43 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:16:17 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,24 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	ptr = (unsigned char *)s;
 	i = 0;
-	while (i++ <= n)
+	while (i < n)
 	{
-		if (((char *)s)[i] <= c)
-			return ((char *)&ptr[i]); 
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return ((unsigned char *)&ptr[i]); 
+		i++;
 	}
 	return (NULL);
 }
-/*
-int main () {
-   const char str[] = "https://www.tutorialspoint.com";
-   const char ch = '.';
-   char *ret;
 
-   ret = memchr(str, ch, strlen(str));
+//int main () {
+//	char s[] = {0, 1, 2 ,3 ,4 ,5};
+//   const char ch = 'n';
+//   char *ret;
 
-   printf("String after |%c| is - |%s|\n", ch, ret);
+//   ret = ft_memchr(str, ch, 2);
 
-   return(0);
-}
-*/
+//   printf("String after |%c| is - |%s|\n", ch, ret);
+
+//   return(0);
+//}
+

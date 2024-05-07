@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 12:35:39 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/07 10:28:24 by mraineri         ###   ########.fr       */
+/*   Created: 2024/04/29 12:46:09 by mraineri          #+#    #+#             */
+/*   Updated: 2024/05/02 15:41:02 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
+	char *s;
+	int	f;
 	int	i;
 
 	i = 0;
-	while (s[i])
-	{
-		if ((unsigned char)s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
+
+	if(!s1)
+		return (NULL);
+	if(!set)
+		return ((char *)s1);
+	while(s1 && ft_strrchr(set, s1[i]))
 		i++;
-	}
-	if ((unsigned char)c == '\0')
-			return ((char *)&s[i]);
-	return (NULL);
+	f = i;
+	i = ft_strlen(s1);
+	while(ft_strrchr(set, s1[i - 1]))
+		i--;
+	s = ft_substr(s1, f, i - f);
+	return (s);	
 }
-/*
-int	main(void)
-{
-	char s[] = "tripouille";
-	char *bds = strchr(s, 0);
-	char *mytest = ft_strchr(s, 0);
-	printf("%s\n", bds);
-	printf(":%s\n", mytest);	
-}
-*/
+
+//int	main(void)
+//{
+//	// =- | -=-=Marcelo
+//	char *s1 = "lorem \n ipsum \t dolor \n sit \t amet";
+//	printf("%s$\n",ft_strtrim(s1, " "));
+//}

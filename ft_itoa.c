@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 12:35:39 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/07 10:28:24 by mraineri         ###   ########.fr       */
+/*   Created: 2024/05/03 14:01:49 by mraineri          #+#    #+#             */
+/*   Updated: 2024/05/05 16:48:57 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char *ft_itoa(int n)
 {
-	int	i;
+	long num;
+	char str[15];
+	int c;
+	long sig;
 
-	i = 0;
-	while (s[i])
-	{
-		if ((unsigned char)s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
-		i++;
+	if (!n)
+		return ft_strdup("0");
+	sig =  n < 0;
+	num =  n * ((!sig)  - sig);
+	c = 14;
+	str[c--] = '\0';
+	while(num)
+	{ 
+		str[c--] = (num % 10)  + '0';
+		num = num / 10;
 	}
-	if ((unsigned char)c == '\0')
-			return ((char *)&s[i]);
-	return (NULL);
+	if (sig)
+		str[c--] = '-';
+	return ft_strdup(&str[c + 1]);
 }
-/*
-int	main(void)
-{
-	char s[] = "tripouille";
-	char *bds = strchr(s, 0);
-	char *mytest = ft_strchr(s, 0);
-	printf("%s\n", bds);
-	printf(":%s\n", mytest);	
-}
-*/
+
+//int	main(void)
+//{
+//	printf("N:(%s)\n",ft_itoa(INT_MIN));
+//}

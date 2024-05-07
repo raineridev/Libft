@@ -6,26 +6,31 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 18:59:37 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/25 19:27:22 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:32:01 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
-	int	j;
-
-	j = 0;
-	i = 0;
-	while(*s[i] != '\0')
-	{
-		
-	}
+	size_t	size;
+	char    *dst;
+	if (!s)
+		return (NULL);
+	size = ft_strlen((char *) s) - start;
+	if (start >= ft_strlen((char *) s))
+		return ("");
+	if (size > len)
+		size = len;
+	dst = ft_calloc(sizeof(char), size + 1);
+	ft_memcpy(dst, s + start, size);
+	dst[size] = '\0';
+	return (dst);
 }
-
-int	main(void)
-{
-	
-}
+// Marcelo Raineri Pires
+//int	main(void)
+//{ 
+//	char *str = "lorem ipsum dolor sit amet";
+//	printf("%s\n",ft_substr(str, 400, 20));
+//}

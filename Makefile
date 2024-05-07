@@ -6,7 +6,7 @@
 #    By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 12:21:42 by mraineri          #+#    #+#              #
-#    Updated: 2024/04/24 19:37:07 by mraineri         ###   ########.fr        #
+#    Updated: 2024/05/05 17:30:34 by mraineri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,13 @@ CFLAGS := -Wall -Wextra -Werror
 FILES := ft_isalnum.c  ft_isprint.c  ft_memmove.c  ft_strlcat.c  ft_strrchr.c \
 	ft_atoi.c    ft_isalpha.c  ft_memchr.c   ft_memset.c   ft_strlcpy.c  ft_strnstr.c \
 	ft_bzero.c   ft_isascii.c  ft_memcmp.c   ft_strchr.c   ft_strlen.c   ft_tolower.c \
-	ft_calloc.c  ft_isdigit.c  ft_memcpy.c   ft_strdup.c   ft_strncmp.c  ft_toupper.c
+	ft_calloc.c  ft_isdigit.c  ft_memcpy.c   ft_strdup.c   ft_strncmp.c  ft_toupper.c \
+	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_putnbr_fd.c ft_putendl_fd.c \
+	ft_putstr_fd.c ft_putchar_fd.c ft_striteri.c ft_strmapi.c 
 
 OFILES := $(FILES:%.c=%.o)
 
-##Target's
+## Target's
 
 %.o : %.c
 	$(CC) -c $(CFLAGS) $< -o $@

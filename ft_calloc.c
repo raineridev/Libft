@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:54:44 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/24 16:12:48 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:34:41 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	mem = malloc(nmemb * size);
 	if (!mem)
 		return (NULL);
-	while (nmemb-- != 0)
-	{
-		((char *)mem)[nmemb] = '\0';
-	}
+	ft_bzero(mem, nmemb * size);
 	return (mem);
 }
