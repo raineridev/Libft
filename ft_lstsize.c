@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/05 17:25:33 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/11 19:15:58 by mraineri         ###   ########.fr       */
+/*   Created: 2024/05/16 16:46:14 by mraineri          #+#    #+#             */
+/*   Updated: 2024/05/18 20:55:26 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int ft_lstsize(t_list *lst)
 {
-	char *str = ft_itoa(n);
-	write(fd, str, ft_strlen(str));
-	free(str);
+	t_list *node;
+	int	i;
+	
+	i = 0;
+	if(!lst)
+		return (0);
+	node = lst;
+	while(node->next)
+	{
+		i++;
+		node = node->next;
+	}
+	return	(i + 1);
 }
-
 //int	main(void)
 //{
-//	ft_putnbr_fd(-10000, 1);
+//	t_list *node1 = ft_lstnew("Node 1");
+//	t_list *node2 = ft_lstnew("Node 2");
+//	t_list *node3 = ft_lstnew("Node 3");
+//	node1->next = node2;
+//	node2->next = node3;
+//	printf("\n\n\n\033[1;104m Total Of Nodes: %d \n\n\n", ft_lstsize(node1));
+//	return (0);
 //}
