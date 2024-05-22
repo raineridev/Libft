@@ -1,7 +1,7 @@
 
 # Libft
 
-My first libary using  C
+My first library using  C
 
 ## What is this library for?
 This is 42Lisboa's first project, to create my own C library. It's a set of numerous functions that are useful in everyday life, such as calloc.
