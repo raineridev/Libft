@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 15:50:22 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/21 16:09:35 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/23 18:51:57 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		node = next_node;
 		next_node = node->next;
 	}
+	free(node->content);
 	free(node);
 	node = NULL;
 }
