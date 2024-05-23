@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 20:14:45 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/18 20:53:32 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/21 14:09:26 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,22 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *node;
-	if(!new)
+	t_list	*node;
+
+	if (!new)
 		return ;
-	if(!*lst) 
+	if (!*lst)
 	{
 		*lst = new;
 		return ;
 	}
 	node = *lst;
-	while(node->next)
+	while (node->next)
 		node = node->next;
 	node->next = new;
 	new->next = NULL;
 }
-//int	main(void)
+// int	main(void)
 //{
 //	t_list *lst;
 //	t_list *node1 = ft_lstnew("Node 1");
@@ -40,8 +41,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 //	ft_lstadd_back(&node1, lst);
 //	printf("%s", ((char *)node3->next->content));
 //	return (0);
-//}
-//int	main(void)
+// }
+// int	main(void)
 //{
 //	t_list		*begin;
 //	t_list		*elem;
@@ -61,4 +62,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 //	ft_lstadd_back(&begin, elem2);
 //	ft_lstadd_back(&begin, elem3);
 //	ft_lstadd_back(&begin, elem4);
-//}
+// }

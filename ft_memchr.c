@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 17:37:05 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/07 10:16:17 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:27:05 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 //   return(0);
 //}
-

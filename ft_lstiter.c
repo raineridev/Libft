@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 18:57:26 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/18 19:39:02 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/21 14:38:18 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 
 #include "libft.h"
 
-void	ft_modify(void *elem)
-{
-	int		len;
-	char		*content;
+//void	ft_modify(void *elem)
+//{
+//	int			len;
+//	char		*content;
 
-	len = 0;
-	content = (char *)elem;
-	while (content[len])
-	{
-		content[len++] = 'd';
-	}
-}
+//	len = 0;
+//	content = (char *)elem;
+//	while (content[len])
+//	{
+//		content[len++] = 'd';
+//	}
+//}
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if(!lst || !f)
+	if (!lst || !f)
 		return ;
-	while(lst->next)
+	while (lst->next)
 	{
 		(*f)(lst->content);
 		lst = lst->next;
@@ -56,8 +56,10 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 //	node4->next = node5;
 //	node5->next = node6;
 //// Make Action
-//  printf("\n \033[1;101m[Before the function]\033[49;39;0m -> \033[1;104m%s\033[49;39;0m", (char *)node1->content);
+//  printf("\n \033[1;101m[Before the function]\033[49;39;0m 
+//-> \033[1;104m%s\033[49;39;0m", (char *)node1->content);
 //	ft_lstiter(node1, &ft_modify);
-//  printf("\n \033[1;101m[After the function]\033[49;39;0m  -> \033[1;104m%s\033[49;39;0m\n", (char *)node1->content);
+//  printf("\n \033[1;101m[After the function]\033[49;39;0m 
+// -> \033[1;104m%s\033[49;39;0m\n", (char *)node1->content);
 //	return (0);
 //}

@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 19:39:39 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/18 20:08:33 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:24:35 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,18 @@
 //	free(content);
 //}
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
-{
-	if(!lst || !f)
-		return ;
-	while(lst->next)
-	{
-		(*f)(lst->content);
-		lst = lst->next;
-	}
-	(*f)(lst->content);
-	return lst;
-}
+//t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
+//{
+//	if(!lst || !f)
+//		return ;
+//	while(lst->next)
+//	{
+//		(*f)(lst->content);
+//		lst = lst->next;
+//	}
+//	(*f)(lst->content);
+//	return lst;
+//}
 
 //int	main(void)
 //{

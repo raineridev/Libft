@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:19:40 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/07 11:12:02 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:00:59 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-//int main()
+//int main(void)
 //{
 //	char *s = "tripouille"; 
-//	printf(":%s\n",ft_strrchr(s, 't' + 256));
+//	printf(":%s\n",ft_strrchr(s, 'i' + 256));
+//	return (0);
 //}
 // =-=
 // =-=-Marcelo

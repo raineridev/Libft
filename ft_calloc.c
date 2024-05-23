@@ -6,18 +6,19 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:54:44 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/07 16:39:19 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/22 13:49:53 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <limits.h>
+#include "limits.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*mem;
 
+	if (nmemb != 0 && size != 0 && (nmemb * size) / size != nmemb)
+		return (NULL);
 	mem = malloc(nmemb * size);
 	if (!mem)
 		return (NULL);
@@ -26,5 +27,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 //int	main(void)
 //{
-//	char str* = ft_calloc(SIZE_MAX, SIZE_MAX);
+//	char *p1 = ft_calloc(INT_MAX, INT_MAX);
+//	char *p2 = ft_calloc(-5, -5);
+//	char *b1 = calloc(INT_MAX, INT_MAX);
+//	char *b2 = calloc(-5, -5);
+//	printf("%s\n", p1);
+//	printf("%s\n", p2);
+//	printf("%s\n", b1);
+//	printf("%s\n", b2);
 //}

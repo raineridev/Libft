@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 17:03:09 by mraineri          #+#    #+#             */
-/*   Updated: 2024/04/24 19:14:36 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/22 19:32:51 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		if (s1[i] == s2[i])
 			i++;
 		else
-			break;
+			break ;
 	}
 	if (i != n)
 		return (((unsigned char)s1[i] - (unsigned char)s2[i]));

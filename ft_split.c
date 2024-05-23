@@ -6,7 +6,7 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 21:56:40 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/18 19:57:04 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/22 20:03:31 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 int	count_worlds(char const *s, char c, char **list)
 {
 	int	i;
-	int count;
-	
+	int	count;
+
 	count = 0;
 	while (s && *s)
 	{
 		i = 0;
-		while(*s && *s == c)
+		while (*s && *s == c)
 			s++;
-		while(s[i] && s[i] != c)
+		while (s[i] && s[i] != c)
 			i++;
 		if (i)
-		{	
+		{
 			if (list)
 			{
 				list[count] = ft_substr(s, 0, i);
@@ -43,8 +43,9 @@ int	count_worlds(char const *s, char c, char **list)
 
 void	ft_free_split(char **split)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	if (!split)
 		return ;
 	while (split[i])
@@ -52,23 +53,27 @@ void	ft_free_split(char **split)
 	free(split);
 }
 
-char    **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int size = count_worlds(s, c, NULL);
-	char **list = ft_calloc((size + 1), sizeof(char *));
+	int		size;
+	char	**list;
+
+	size = count_worlds(s, c, NULL);
+	list = ft_calloc((size + 1), sizeof(char *));
 	if (!list)
 		return (NULL);
-    if (count_worlds(s, c, list) == -1)
+	if (count_worlds(s, c, list) == -1)
 	{
 		ft_free_split(list);
 		return (NULL);
 	}
-	return list;
+	return (list);
 }
 
 //int main(void)
 //{
-//	const char *s = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+//	const char *s = "lorem ipsum dolor sit amet,
+// consectetur adipiscing elit. Sed non risus. Suspendisse";
 //	char** list = ft_split(s, ' ');
 //	for (int i = 0; list[i]; i++)
 //	{

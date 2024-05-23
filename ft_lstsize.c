@@ -6,27 +6,27 @@
 /*   By: mraineri <mraineri@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:46:14 by mraineri          #+#    #+#             */
-/*   Updated: 2024/05/18 20:55:26 by mraineri         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:11:52 by mraineri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	t_list *node;
-	int	i;
-	
+	int		i;
+	t_list	*node;
+
 	i = 0;
-	if(!lst)
+	if (!lst)
 		return (0);
 	node = lst;
-	while(node->next)
+	while (node->next)
 	{
 		i++;
 		node = node->next;
 	}
-	return	(i + 1);
+	return (i + 1);
 }
 //int	main(void)
 //{
